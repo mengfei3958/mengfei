@@ -1,0 +1,14 @@
+使用指南：
+一定要先检查号段是否已经插入
+ObtainAllImeiOfFile：根据原始文件获取imei列表和文件名称，生成imei.xlsx;
+ImeiSelect：根据imei.xlsx文件提取出号段列表，包括连续的和所有不连续的imei号，生成SD2500_imei.xlsx；
+ImeiSelectConcat：根据imei.xlsx文件提取出起始号段和结束号段两列的imei号并拼接在一个单元格里，作为第三列号段区间，生成writeSegment.xlsx；
+ImeiSelectOfModel（针对样机）：根据imei.xlsx提取出号段列表，包括商用机和样机，并且把样机单独拆分出来，生成SD2500_imei.xlsx；
+CheckFotaDeploySql（针对起始号段和结束号段）：根据SD2500_imei.xlsx号段区间检查已部署的号段管理、差分包关联、强制升级规则的sql插入结果的正确性，生成checkWriteInsertFotaSql.xlsx；
+CheckFotaDeploySqlByImei（针对单个imei号）：根据SD2500_imei.xlsx号段区间检查已部署的号段管理、差分包关联、强制升级规则的sql插入结果的正确性，生成checkWriteInsertFotaSqlByImei.xlsx；
+FotaLogSql：根据SD2500_imei.xlsx号段区间生成每日工作日报的sql查询语句，生成writeFotaLogSql.xlsx；
+InsertFotaSql：根据SD2500_imei.xlsx号段区间,把提取出的imei号段批量生成号段管理、差分包关联、强制升级规则的sql插入语句，生成writeInsertFotaSql.xlsx；
+
+手动提交事务：
+start transaction;
+commit;

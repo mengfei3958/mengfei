@@ -1,0 +1,23 @@
+ftp:
+  #  FTP的IP地址
+  ftpHost: "47.105.53.232"
+  #  FTP的端口 默认是21
+  ftpPort: 21
+  #  FTP登陆的用户名
+  ftpUserName: "root"
+  #  FTP登陆密码
+  ftpPassword: "OvZP*d#dFP3TBxMC"
+  #  FTP服务器上指定目录
+  ftpPath: "/face"
+  #  本地文件路径
+  filePath: "/face"
+  #  本地文件名
+  fileName: ""
+  #  FTP上传文件夹位置
+  uploadFile: "D:/Download/projectFile"
+  #  FTP上传文件名称
+  uploadFileName: "testConfig.xml"
+  #  FTP下载指定文件夹
+  downloadFile: "D:/Download/projectFile"
+  #  FTP下载 指定文件名
+  downloadFileName: "5.jpg"
